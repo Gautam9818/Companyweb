@@ -29,18 +29,23 @@ document.addEventListener("DOMContentLoaded", function () {
   initializeSlider("service-slider");
 
   
+
 document.getElementById("contact-form").addEventListener("submit", function (event) {
     event.preventDefault();
+    const formData = {
+      name: this.name.value,
+      email: this.email.value,
+      message: this.message.value
+    };
 
-    let formData = new FormData(this);
-
-    fetch("send_email.php", {
-        method: "POST",
-        body: formData,
+    fetch("/.netlify/functions/send-email", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData)
     })
     .then(response => response.text())
     .then(data => {
-        document.getElementById("response-message").textContent = data;
+      document.getElementById("response-message").textContent = data;
     })
     .catch(error => console.error("Error:", error));
 });
