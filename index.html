@@ -6,6 +6,7 @@
   <title>DS CONTRACTOR | Professional Construction Services</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet" />
 </head>
 <body>
@@ -98,29 +99,50 @@
   </section>
   
   <!-- Modern Contact Section -->
+  <!-- Modern Contact Section -->
   <section id="contact" class="contact">
     <div class="container">
-      <div class="contact-info">
-        <h2>Contact Us</h2>
-        <p>Have a project in mind or any questions? We'd love to hear from you. Reach out to us anytime!</p>
-        <ul class="contact-details">
-          <li><strong>Email:</strong> domarsingh6866@gmail.com</li>
-          <li><strong>Phone:</strong> +91 9871797482</li>
-          <li><strong>Address:</strong> 1234 Main St, Your City</li>
-        </ul>
-      </div>
-      <div class="contact-form-wrapper">
-        <!-- Added the id "contact-form" -->
-        <form id="contact-form" name="contact" method="POST" data-netlify="true">
-          <input type="hidden" name="form-name" value="contact" />
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="message" placeholder="Your Message" required></textarea>
-          <button type="submit" class="btn">Send Message</button>
-        </form>
-      </div>
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>Have a project in mind or any questions? We'd love to hear from you. Reach out to us anytime!</p>
+            <ul class="contact-details">
+                <li><i class="fas fa-envelope"></i> <strong>Email:</strong> domarsingh6866@gmail.com</li>
+                <li><i class="fas fa-phone-alt"></i> <strong>Phone:</strong> +91 9871797482</li>
+                <li><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> Delhi</li>
+            </ul>
+        </div>
+        <div class="contact-form-wrapper">
+            <form action="https://formsubmit.co/domarsingh6866@gmail.com" method="POST" class="contact-form">
+                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="[0-9]{10}" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
     </div>
-  </section>
+</section>
+
   
   <!-- Footer -->
   <footer>
