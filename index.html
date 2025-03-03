@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -73,13 +74,18 @@
   </header>
   
   <!-- Service Slider -->
-  <section class="slider-container">
-    <section class="slider service-slider">
-      <img src="1benjamin-child-0sT9YhNgSEs-unsplash.jpg" class="active" alt="Service Slide 1">
-      <img src="pawel-chu-ULh0i2txBCY-unsplash.jpg" alt="Service Slide 2">
-      <img src="slidebean-_6rmAEDLtiQ-unsplash.jpg" alt="Service Slide 3">
-    </section>
-  </section>
+  <section class="slider-containerone">
+    <button class="slider-btn prev">❮</button>
+    <div class="slider-wrapper"> 
+      <section class="slider service-sliderone">
+        <img src="Serviceslide1.jpg" alt="Service Slide 1">
+        <img src="Serviceslide2.jpg" alt="Service Slide 2">
+        <img src="serviceslide3.jpg" alt="Service Slide 3">
+      </section>
+    </div>
+    <button class="slider-btn next">❯</button>
+</section>
+
   
   <!-- Intro Section -->
   <section class="intro-section">
@@ -91,18 +97,18 @@
   </section>
   
   <!-- Services Section -->
-  <section id="services" class="services">
-    <div class="container">
+  <section id="Customers" class="Customers">
+    <div class="Customers-container">
       <h2>Our Customers</h2>
-      <div class="service-list">
-        <div class="service-item"><img src="gulf.png" alt="" class="imageunder"></div>
-        <div class="service-item"><img src="bando.svg" alt="" class="imageunder"></div>
-        <div class="service-item"><img src="nayara.png" alt="" class="imageunder"></div>
+      <div class="Customers-list">
+        <div class="Customers-item"><img src="gulf.png" alt="" class="imageundercon"></div>
+        <div class="Customers-item"><img src="bando.svg" alt="" class="imageunder"></div>
+        <div class="Customers-item"><img src="nayara.png" alt="" class="imageunder"></div>
       </div>
-      <div class="service-list">
-        <div class="service-item"><img src="JMD PACFIC.jpg" alt="" class="imageunder"></div>
-        <div class="service-item"><img src="JMD-empire-square-big.jpg" alt="" class="imageunder"></div>
-        <div class="service-item"><img src="JMD-regent-square-big.jpg" alt="" class="imageunder"></div>
+      <div class="Customers-list">
+        <div class="Customers-item"><img src="JMD PACFIC.jpg" alt="" class="imageunder"></div>
+        <div class="Customers-item"><img src="JMD-empire-square-big.jpg" alt="" class="imageunder"></div>
+        <div class="Customers-item"><img src="JMD-regent-square-big.jpg" alt="" class="imageunder"></div>
       </div>
     </div>
   </section>
@@ -136,21 +142,29 @@
 
   <!-- Projects Section -->
   <section id="projects" class="projects">
-    <div class="container">
-      <h2>Our Projects</h2>
-      <p>Showcasing our finest construction works.</p>
-      <section class="slider-container">
-        <section class="slider project-slider">
-          <img src="59AM.jpeg" class="active" alt="Slide 1">
-          <img src="10AM.jpeg" alt="Slide 2">
-          <img src="34AM.jpeg" alt="Slide 3">
-          <img src="31AM.jpeg" alt="Slide 4">
-          <img src="11AM.jpeg" alt="Slide 5">
-          <img src="15PM.jpeg" alt="Slide 6">
+    <div class="projectscontainer">
+        <h2>Our Projects</h2>
+        <p>Showcasing our finest construction works.</p>
+        
+        <section class="projectsonecontainer">
+            <div class="projectscollage">
+                <img src="59AM.jpeg" alt="Slide 1" onclick="openLightbox(this)">
+                <img src="10AM.jpeg" alt="Slide 2" onclick="openLightbox(this)">
+                <img src="34AM.jpeg" alt="Slide 3" onclick="openLightbox(this)">
+                <img src="31AM.jpeg" alt="Slide 4" onclick="openLightbox(this)">
+                <img src="11AM.jpeg" alt="Slide 5" onclick="openLightbox(this)">
+                <img src="15PM.jpeg" alt="Slide 6" onclick="openLightbox(this)">
+            </div>
         </section>
-      </section>
     </div>
-  </section>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" class="lightbox-img">
+</div>
+
   
 
 
